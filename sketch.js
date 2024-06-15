@@ -5,7 +5,11 @@ h=20,mySound,mybac,img;
 
 frameCount =false
 function preload()
-{     
+{ 
+   
+  
+  let a = createA('https://x.com/ibrahimbachirii', 'X');
+  a.position(500, 35);
 
       soundFormats('wav');
       mySound =loadSound('game');
@@ -27,10 +31,8 @@ function preload()
 
 function setup()
 {
+ 
   
-  
-  let a = createA('https://x.com/ibrahimbachirii', 'X');
-  a.position(500, 35);
 
       createCanvas(400, 400);
 
