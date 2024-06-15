@@ -5,7 +5,8 @@ h=20,mySound,mybac,img;
 
 frameCount =false
 function preload()
-{
+{     
+
       soundFormats('wav');
       mySound =loadSound('game');
       soundFormats('mp3');
@@ -26,6 +27,11 @@ function preload()
 
 function setup()
 {
+  
+  
+  let a = createA('https://x.com/ibrahimbachirii', 'X');
+  a.position(500, 35);
+
       createCanvas(400, 400);
 
       Button = createButton('Start');
@@ -49,6 +55,8 @@ function Start() {
 }
 function draw() 
 {
+
+  
   // if(bmg){
   //   image(bmg,rx,r1,20,20)
   // }
@@ -293,3 +301,5 @@ function keyPressed(){
     x = x -s
    }
  }
+
+
