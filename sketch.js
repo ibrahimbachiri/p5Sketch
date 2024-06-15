@@ -57,8 +57,8 @@ function Start() {
 }
 function draw() 
 {
-
-  
+   strokeWeight(5);
+   rect(500, 35,100,100);
   // if(bmg){
   //   image(bmg,rx,r1,20,20)
   // }
