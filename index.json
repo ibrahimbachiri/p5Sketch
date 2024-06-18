@@ -1,0 +1,92 @@
+{
+  "assets": {
+    "images": {
+      "img": "d.png",
+      "bk": "basket.png",
+      "bmg": "a.png",
+      "cmg": "c.png",
+      "dmg": "d.png",
+      "emg": "e.png",
+      "fmg": "f.png",
+      "gmg": "g.png",
+      "hmg": "h.png",
+      "jmg": "j.png",
+      "kmg": "k.png",
+      "lmg": "l.png",
+      "mmg": "m.png",
+      "nmg": "n.png",
+      "omg": "o.png",
+      "pmg": "p.png",
+      "qmg": "q.png",
+      "rmg": "r.png",
+      "smg": "s.png",
+      "tmg": "t.png"
+    },
+    "sounds": {
+      "mySound": "game.wav",
+      "mybac": "bac.mp3"
+    }
+  },
+  "gameSettings": {
+    "canvasWidth": 400,
+    "canvasHeight": 400,
+    "initialX": 200,
+    "initialY": 300,
+    "initialRx": 200,
+    "initialR1": 10,
+    "speed": 8,
+    "play": false,
+    "width": 60,
+    "height": 20
+  },
+  "ui": {
+    "buttonText": "Start",
+    "buttonX": 175,
+    "buttonY": 200
+  },
+  "levels": {
+    "level1": {
+      "startFrame": 0,
+      "endFrame": 1000,
+      "message": "You Lose",
+      "x": 50,
+      "y": 40
+    },
+    "level2": {
+      "startFrame": 1000,
+      "endFrame": 2000,
+      "message": "You Lose",
+      "x": 50,
+      "y": 40
+    },
+    "level3": {
+      "startFrame": 2000,
+      "endFrame": 3000,
+      "message": "You Lose",
+      "x": 50,
+      "y": 40
+    },
+    "level4": {
+      "startFrame": 3000,
+      "endFrame": 4000,
+      "message": "You Lose",
+      "x": 50,
+      "y": 40
+    },
+    "level5": {
+      "startFrame": 4000,
+      "endFrame": 5000,
+      "message": "You Lose",
+      "x": 50,
+      "y": 40
+    },
+    "level6": {
+      "startFrame": 5000,
+      "endFrame": 6000,
+      "messageWin": "You Win",
+      "messageLose": "You Lose",
+      "x": 50,
+      "y": 40
+    }
+  }
+}
