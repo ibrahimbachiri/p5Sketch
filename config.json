@@ -1,0 +1,89 @@
+let config;
+
+function preload() {
+  config = loadJSON('config.json', setupGame);
+  let a = createA('https://x.com/ibrahimbachirii', 'X');
+  a.position(500, 35);
+}
+
+function setupGame() {
+  // Load sounds and images from config
+  soundFormats('wav', 'mp3');
+  mySound = loadSound(config.assets.sounds.mySound);
+  mybac = loadSound(config.assets.sounds.mybac);
+  img = loadImage(config.assets.images.img);
+  bk = loadImage(config.assets.images.bk);
+  bmg = loadImage(config.assets.images.bmg);
+  cmg = loadImage(config.assets.images.cmg);
+  dmg = loadImage(config.assets.images.dmg);
+  emg = loadImage(config.assets.images.emg);
+  fmg = loadImage(config.assets.images.fmg);
+  gmg = loadImage(config.assets.images.gmg);
+  hmg = loadImage(config.assets.images.hmg);
+  jmg = loadImage(config.assets.images.jmg);
+  kmg = loadImage(config.assets.images.kmg);
+  lmg = loadImage(config.assets.images.lmg);
+  mmg = loadImage(config.assets.images.mmg);
+  nmg = loadImage(config.assets.images.nmg);
+  omg = loadImage(config.assets.images.omg);
+  pmg = loadImage(config.assets.images.pmg);
+  qmg = loadImage(config.assets.images.qmg);
+  rmg = loadImage(config.assets.images.rmg);
+  smg = loadImage(config.assets.images.smg);
+  tmg = loadImage(config.assets.images.tmg);
+  
+  // Initial game settings
+  x = config.gameSettings.initialX;
+  y = config.gameSettings.initialY;
+  rx = config.gameSettings.initialRx;
+  r1 = config.gameSettings.initialR1;
+  s = config.gameSettings.speed;
+  play = config.gameSettings.play;
+  w = config.gameSettings.width;
+  h = config.gameSettings.height;
+  
+  // Setup canvas and UI
+  createCanvas(config.gameSettings.canvasWidth, config.gameSettings.canvasHeight);
+  Button = createButton(config.ui.buttonText);
+  Button.position(config.ui.buttonX, config.ui.buttonY);
+  Button.mousePressed(Start);
+  textSize(30);
+  frameRate(1000);
+  text(frameCount, 50, 50);
+}
+
+function Start() {
+  play = true;
+  r1 = 10;
+  frameCount = 0;
+  loop();
+}
+
+function draw() {
+  strokeWeight(5);
+  rect(500, 35, 100, 100);
+
+  if (r1 > 390) {
+    Button.show();
+  } else {
+    Button.hide();
+  }
+  
+  background(20);
+  text(frameCount, 300, 50);
+
+  // Handle levels and messages from config
+  for (let level in config.levels) {
+    let lvl = config.levels[level];
+    if (frameCount >= lvl.startFrame && frameCount < lvl.endFrame && r1 > 390) {
+      textSize(30);
+      text(`Level ${level[level.length - 1]}`, lvl.x, lvl.y);
+      frameCount === lvl.startFrame;
+      textSize(18);
+      text(lvl.message, 165, 180);
+      noLoop();
+    }
+  }
+  
+  // Remaining game logic...
+}
