@@ -1,7 +1,6 @@
+Fruit Catcher Game : 
 
-Sure! Here's a detailed README description for your fruit game project:
 
-Fruit Catcher Game
 Welcome to the Fruit Catcher Game! This game is built using JavaScript and the p5.js library. The objective is to catch falling fruits in a basket by moving it left and right. The game progresses through multiple levels, with increasing difficulty.
 
 Table of Contents
